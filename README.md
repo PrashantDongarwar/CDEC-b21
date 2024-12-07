@@ -109,13 +109,13 @@ country   state     city    village  home
           cd ./d
 
 
-touch file.txt --------- create file at current location
-touch /home/data.txt ----- create file inside home directory   
-touch project.txt project1.txt -------- create multiple files in sigle command   
-touch /mnt/imp.txt /root/abc.txt /home/xyz  ------ create multiple files in different locations
-touch /root/{data.txt,file1.txt,projectfile.txt} ------- create multiple file at different location
-touch file{1..20}.txt  -------- create 20 files with same name in single command
-touch .imp.txt  -------- to create hidden file
+touch file.txt--------- create file at current location
+touch /home/data.txt----- create file inside home directory 
+touch project.txt project1.txt-------- create multiple files in sigle command  
+touch /mnt/imp.txt /root/abc.txt /home/xyz------ create multiple files in different location
+touch /root/{data.txt,file1.txt,projectfile.txt}------- create multiple file at different location
+touch file{1..20}.txt-------- create 20 files with same name in single command
+touch .imp.txt-------- to create hidden file
 ls -a -------- to list hidden files
 mkdir demo -------- to create directory at current location
 
