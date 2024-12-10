@@ -120,3 +120,84 @@ ls -a -------- to list hidden files
 mkdir demo -------- to create directory at current location
 
 task: Do the same practice with mkdir command
+
+File operation :
+
+READ :-
+ 1) cat  ----------- use to read the file which have small amount od data
+ 2) more ----------- you can scroll the data downword using enter command, but you cant scroll updard
+ 3) less ----------- you can scroll upward and downward using upper arrow key and lower arrow key. come out using ctrl+z
+ 4) head ----------- by deafult it will show top 10 lines
+    head -n <no> <file name>
+    ex : head -n 5 /etc/passwd --------- it will show top 5 lines
+5) tail ------------ by deafult it will show bottom 10 lines
+    tail -n 15 /etc/passwd ------- it will show bottom 5 lines
+
+
+
+COPY :-
+ 
+command ---
+     cp <options> <source> <destination>
+       
+  options :
+       -r ------- (recursive) for copy the directory
+       -f ------- for forcefully
+       -v ------- (verbose/view)     
+ex: cp /root/file.txt /home/   ----------copy file.txt from root to home dir
+    cp -rv /root/dir1 /home/   ---------- copy directory from root to home
+
+REMOVE :- 
+      rm <options>  <file name>     
+ex :  rm file.txt --------- remove the file
+      rm -rvf <directory name> 
+      rmdir dir1------- remove the empty directory
+
+MOVE : 
+    mv <source> <destination>
+ex: mv /mnt/project /home/ -------- move project dir from mnt to home
+    mv /home/file.txt /root/ ------ move file.txt from home root
+    mv flowor.txt flower.txt ------- we can rename the filename
+    mv /root/flowor.txt /home/flower.txt
+
+
+Hierachy Of linux file system :
+1) /root ------- root directory is a home directory of root user *
+2) /home ------ it is a home directory of local userb*
+3) /etc ------- it stores all configurations files of system and services *
+4) /bin ------- it stores binary files, binary file means nothing but our commands (local user commands)
+5) /sbin ------ it srores system binary executable files, commands----- (root user command)
+6) /var ------ it stores variable data such as, mail, logs, messages etc.... *
+7) /lib32 ------ library file information, support 32 bit commands
+8) /lib64 ------ library file information, 64 bit supporting files 
+9) /boot ------- it store boot loader and other booting files that helps to start our system
+10) /dev ------- it stores device realated information, usb drives, printer, 
+11) /media ----- information of removable devices, card reader, pendrives, flopy disk
+12) /sys ------- system realed information
+13) /run ------ store the infirmation of all runnig devices
+14) /proc ----- it stores the process related information, it store information related RAM and CPU
+15) /tmp ------ it stores temporary file for 10 days
+16) /usr ------ it store user related information, man pages
+17) /srv ------ it stores service realated information
+18) /mnt ------ it store mount point for our storage devices ex : hard disk*
+19) /opt ----- optional directory, addon services information 
+
+1.boot
+2.bin
+3.dev
+4.etc
+5.home
+6.lib32
+7.lib64
+8.media
+9.mnt
+10.opt
+11.proc
+12.root
+13.run
+14.sbin
+15.sys
+16.srv
+17.tmp
+18.var
+19.usr
