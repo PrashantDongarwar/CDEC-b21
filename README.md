@@ -1,6 +1,4 @@
-# CDEC-b21
-
-Introduction 
+## Introduction 
 
 Linux is a open source operating system:
 
@@ -24,7 +22,7 @@ O/S:-
           ex. windows, (90-95%) ubuntu desktop, kali
            GUI-- graphical user interface
 
- 2. server O/S ------ web hosting, network file sharing
+   2. server O/S ------ web hosting, network file sharing
           ex. Linux o/s (90%)
             ubuntu, centos, kali linux, debian, fedora, RHEL, windows 19
             CLI-- command line inetrface.
@@ -38,6 +36,8 @@ O/S:-
 
 
 Architecture of Linux:-
+
+
 
 Application Layer: - Users interact with the system through varies applications such as office, games, 
 etc. These applications run in outer layer of architecture. 
@@ -89,11 +89,9 @@ steps to download cal command
 
 command promp:
 
-root            @          67531857098fa2ceb3702fe8:     ~                         #
-login user   saperator      hostname(machine name)    present directory    it shows root user login
-                                                                           local user ($)
-
-
+   root            @          67531857098fa2ceb3702fe8:      ~                         #
+login user      saperator      hostname(machine name)    present directory    it shows root user login or
+                                                                                  local user ($)
 
 Navigating the filesystem
 
@@ -124,7 +122,7 @@ mkdir /project/demo ------- demo directory will be created inside practice dir.
 mkdir -p /root/project/practice ---------- create parent directory 
 task: Do the same practice with mkdir command
 
-File operation :
+## File operation :
 
 READ :-
  1) cat  ----------- use to read the file which have small amount od data
@@ -165,7 +163,7 @@ ex: mv /mnt/project /home/ -------- move project dir from mnt to home
     mv /root/flowor.txt /home/flower.txt ------ move and rename at same time
 
 
-Hierachy Of linux file system :
+## Hierachy Of linux file system :
 1) /root ------- root directory is a home directory of root user *
 2) /home ------ it is a home directory of local users*
 3) /etc ------- it stores all configurations files of system and services *
@@ -183,7 +181,7 @@ Hierachy Of linux file system :
 15) /tmp ------ it stores temporary file for 10 days
 16) /usr ------ it store user related information, man pages
 17) /srv ------ it stores service realated information
-18) /mnt ------ it store mount point for our storage devices ex : hard disk*
+18) /mnt ------ it store mount point for our storage devices ex : hard disk *
 19) /opt ----- optional directory, addon services information
 
 1.boot
@@ -203,10 +201,10 @@ Hierachy Of linux file system :
 15.sys
 16.srv
 17.tmp
-18.var
-19.usr
+18.usr
+19.var
 
-**Eitior in Linux 
+## Eitior in Linux 
 
 In windows :- note pad, m. world, vs code
 
@@ -221,7 +219,7 @@ In Linux :-
     3) Execution mode
     4) Visual mode
 
-    1) Command mode :
+    #1) Command mode :
        1. G -------- move cursor at end of file, bottom of the file
        2. gg ------- move cursor at top of the file
        3. yy ------- for copy the line where your cursor is present
@@ -244,7 +242,7 @@ In Linux :-
        18. u -------- undo the changes
        19. ctrl+r ------- redo the changes
 
-    2) Insert mode : 
+    #2) Insert mode : 
        we can edit the data manually
        1. i ------- to inster into inser mode 
        2. I ------- inser text at start of the line
@@ -253,9 +251,9 @@ In Linux :-
        5. o 
        6. O  
        7. r  
-       8. R ------ 
+       8. R 
 
-    3) Execution mode : 
+    #3) Execution mode : 
        - Type ":" to insert into execution mode
        1. :q ------ quit without saving the file
        2. :q! ------ quit forcefully without saving the file 
@@ -270,7 +268,7 @@ In Linux :-
        11. :%s/<oldword>/<newword>/g ------ find the word and replace it with new word
        12. :!touch /home/file.txt -------- execute any command on terminal without leaving the editior
 
-    4) Visual mode :
+    #4) Visual mode :
        - V --------- select line by line
        - v --------- slect character by character
 
@@ -285,7 +283,7 @@ In Linux :-
       task : copy data from one file to another file with overwrite
              copy data from one file to another file without overwrite
 
-Topic : Managing Users and Permissions in Linux :-
+## Topic : Managing Users and Permissions in Linux :-
 
        A user is a person who utilizes a computer or network service. Linux is said to be secure 
        because one user cannot access files of other user without its permission. There are three types of user, 
@@ -310,8 +308,10 @@ Topic : Managing Users and Permissions in Linux :-
         userdel --remove <username> ----- remove user with its home direcotry
         su - <username>    --------- for switching between users
         su <username>  ----------- switch user but stay in present directory
+        
 
-   Files get affect after useradd in the system
+   #Files get affect after useradd in the system :
+
    1. /home  ------------ by deafult directory get created with user name
    2. /var/spool/mail
    3. skeleton files --
@@ -333,18 +333,20 @@ Topic : Managing Users and Permissions in Linux :-
          
       commands for user modifications: 
          usermod <option> <parameter> <username>
-           
-        1) usermod -u 2000 nikita     -------- for change the userid UID
-        2) usermod -c "devops engineer" nikita ------- change the comment
 
-
-
+        1) usermod -l <new_name> <old_name>  
+        2) usermod -u 2000 nikita     -------- for change the userid UID
+        3) usermod -c "devops engineer" nikita ------- change the comment
+        4) usermod -d /mnt <user_name> -------- chnage home dir of user to mnt
+        5) usermod -s /bin/sh <user_name> ----- change user login shell
+        6) usermod -L <user_name> ------ Lock user account
+        7) usermod -U <user_name> ------ unlock user account
 
 
    5. /etc/shadow 
        ----- user passowrd informaton
 
-hemraj: $y$j9T$oXv8/KZclX2EUiYoREqfF.$9owMeytAiWkYKJQQP   :20073   :6  :90   :7 :20 :30 march 2025 :
+      ubuntu:$y$j9T$KBrdN4tKMbqQGaWziO0f50$s2fELyTr6Vl8gaRR42Woq3uHGIQwE4Y9U.5B/gmU6C3:20182:10:90:10:30:20333:
             
       1. Username: This is a unique name for the user. User names are important to match a 
          user to his password. On Linux, there can be no spaces in the user name. 
@@ -367,14 +369,459 @@ hemraj: $y$j9T$oXv8/KZclX2EUiYoREqfF.$9owMeytAiWkYKJQQP   :20073   :6  :90   :7 
       9. For future use: This is reserved field for future use. 
 
 commands :
-   chage -l <username>  -------list the password onformation
-   chage -m <username> ------ change minimum days between password change
+   syntax; 
+   chage <option> <parameter> <username>
+
+   chage -l <username> ------- list the password onformation
+   chage -m <username> ------- change minimum days between password change
    chage -M <username> ------- maximum password age
    chage -W <username> ------- warning days
    chage -I <username> ------- password inactive days
    chage -E <username> ------- account expired
 
 
-  6. /etc/group  ------
+  6. /etc/group  ------ it provide information about groups
+      TCS              :x                   :5001        :
+    (group name)  (encrypted password)      (GID)        (group members)
+
+   commands :
+    groupadd <groupname>  ------ for adding the group in system
+    groupadd -g 2003 TATA ------ assigne perticular group id during creating the group
+    groupmod <option> <parameter> <groupname>  ------------- modifyning the group
+    groupmod -g 4001 TCS  -------- changing the group id
+    groupmod -n Wipro TCS -------- change the group name
         
-  7. /etc/gshadow -----
+  7. /etc/gshadow ----- group password information, admin
+
+    TATA           :!                       :            :
+   (group name)  (encrypted password)  (admin name)   (group memebers)
+
+   gpasswd <groupname> ------ provide password to group
+   gpasswd -A <username> <groupname> ------ assign user as admin of group
+   gpasswd -A "" <groupname>  ---------- remove a user as the administrator of a group
+
+   command to add user in group
+   gpasswd -a <username> <groupname>
+   gpasswd -M <username,username,username> <groupname>
+   gpasswd -d <username> <groupname> ------- removing the user from group
+   usermod -G <groupname> <username>
+   useradd -G <groupname> <username> ------- add user to group at a time of user creation
+   groupdel <groupname> ----- to delete the group
+
+
+## Linux File system security 
+commnad 
+ ls -l or ll
+
+    d             rwxr-xr-x       2            root          root                   6       Jun 27 22:20       srv
+(type of file) (permossions)  (Link count) (owner of file) (group owner of file) (size) (date of creation)  (file name)
+
+
+1) user define files: 
+    1. Normal file (-)
+    2. Directory (d)
+    3. Link file (l)
+
+2) system define files:
+   1. block device file (b)
+   2. Character device file (c)
+   3. Socket file (s)
+   4. Pipe file (p)
+
+
+r ----- read
+w ----- write
+x ----- execute
+
+rwx                    r-x            --x
+(owner of file)   (group owner)   (other users)
+    u                 g               o
+
+
+for directory :
+r (read)  ------- ls 
+w (write) ------- touch, mkdir, rm, cp, mv
+x (execute) ----- cd
+
+
+for file :
+r (read) ------- cat, more, less, head, tail, vim 
+w (write) ------ edit(vim), rm, cp, mv, redirect
+x (execute) ---- commands, scripts 
+
+
+chmod u-r <filename/directoryname> ------ remove read permission of user
+chmod u-rx <filename>  ----------------- remove read and execute permission from user
+chmod g+rwx <filename>   ----------------- add write permission for group
+chmod o=rw <filename>  ----------------- assign permission of read and write for others (old permission will be removed)
+
+
+r  =4
+w  =2
+x  =1   
+
+chmod 777 file.txt 
+
+-user  --7  (rwx)
+-group --7  (rwx)   ------ rwxrwxrwx
+-other --7  (rwx)
+
+chmod 732 file.txt
+
+user  --7  (rwx)
+group --3  (wx)    ------ rwx-wx-w-
+other --2   (w)
+
+chmod 651 file.txt 
+
+user --6  (rw)
+group --5 (rx)  --------- rw-r-x--x
+other --1 (x)
+
+
+644, ---- rw-r--r--
+731, ---- rwx-wx--x
+512, ---- r-x--x-w-
+335  ---- -wx-wx-r-x
+
+Task: 
+bydefault permissions for root user  ----- for file and directory  file- 644   dir- 755
+bydefault permission for local user  ----- for file and directory  file- 664   dir- 775
+
+
+#There are two types of symblolic link
+1. Hard link
+   - We create hard link for backup purpose
+   - Hard links are not allowed for directories
+   - it possible to create hard link of files only
+   - it content actual data from original file
+   - If the original file is removed, the link will still work as it accesses the data the original was having access to.
+   - size is as actual as orginal file
+   - Files that are hard linked take the same inode number.
+   - command : ln <original_filename> <hardlink_name>
+
+2. Soft link
+   - Soft links can be used for linking directories
+   - Soft links only point to the file name, it does not retain data of the file
+   - If the original file is removed, the link will not work as it doesn’t access the original file’s data.
+   - size of softlink depends on path of the file
+   - Files that are soft linked take a different inode number.
+   - command : ln -s <originalfile_name> <softlink_name>
+
+
+Link count :
+default link count of file - 1
+default link count of directory - 2
+
+-Link count of file will be change only when hardlink of it get created
+-Linkcount of directory wiil be change when we create directory inside the directory
+
+
+User and Group ownership :
+
+chown <username> <filename/directory_name>    ------ change the ownaer of file or directory
+chgrp <groupname> <filename/dir_name>    --------- chnage group ownership
+chown <username>:<groupname> <file/dir_name>  ----- change owner and group owner
+
+
+## Archive and Compression :
+
+Archive -
+   --- backup purpose
+   --- tranfer the data in bundling format over the internet
+
+tols -
+  windows--- winRAR
+  linux --- tar (tape archive)
+
+command : 
+   tar -cvf <archive_filename.tar> <file to be archive>
+ex: tar -cvf etc.tar etc
+   
+   tar -tvf <archive_filename>  ------ for read the data
+   tar -tvf etc.tar
+
+   tar -xvf <archived_filename> ------- extract archive file
+   tar -xvf etc.tar 
+   tar -xvf etc.tar -C /root/  ------- extract file in different location
+
+   du -sh <filename>    ------ to see size of file
+
+
+   options: 
+        -c ----- create
+        -v ----- verbose/view
+        -f ----- forcefully
+        -x ----- extract
+
+ Compression :
+ 1) gzip (z)
+    command: gzip <archive_filename>
+            gzip /etc.tar   ------------> etc.tar.gz
+            gunzip etc.tar.gz   --------- unzip the compress file
+
+ 2) bzip2 (j)
+   command: bzip2 /etc.tar -------------> etc.tar.bz2
+            bunzip2 etc.tar.bz2 --------
+
+ 3) xz (J)
+   command: xz /etc.tar ----------------> etc.tar.xz
+            unxz etc.tar.xz
+
+check the size of file :
+ command : du -sh <file_name> 
+
+
+archive and compression in single command :
+ 1. tar -czvf /etc.tar.gz /etc  -------- archive and compress using gzip
+   tar -xzvf /etc.tar.gz -C /mnt/ ------ decompress and extract the file
+
+ 2. tar -cjvf /etc.tar.bz2 /etc -------- archive and compression using bzip2
+    tar -xjvf /etc.tar.bz2 -C /home/ --- decompress and extract the file
+
+ 3. tar -cJvf /etc.tar.xz /etc --------- archive and compresiion using xz
+    tar -cJvf /etc.tar.xz -C /root/ ---- decompress and extract the file
+
+Login to your aws account
+- search ec2 (elastic cloud compute)
+- click on launch instamce
+- give name to machine
+- select os (ubuntu)
+- create key pair 
+- leave other settings as bydefault
+- and click on launch instance
+
+- wait for get the status check of instance 2/2
+- then open windows terminal
+- run command : cd .\Downloads\
+- go to aws cansole select launched instance, then click on connect
+- select their option ssh client
+- copy the command, wich will be in example: tab
+- paste it in windows terminal 
+- you will be connect with your remote server
+
+
+## Scheduling task :
+
+Tools :
+ 1. at  (non-periodic task)
+ 2. crontab (periodic task)
+ 3. anacron (desktop server)
+
+1) at :
+ # apt update
+ # apt install at
+
+ command :
+   at "15:20 23 dec 2024"  
+   at> touch /file.txt
+   at> mkdir /home/demo
+   ctrl+D
+
+   atq  --------- to show schedule jobs (at queue)
+   at -c <job_id> ------ show more info about schedule task
+   atrm <job_id> ------- to remove task
+
+2) crontab
+   /etc/crontab     ----------- crontab file
+
+   *      *    *      *       *
+   min   hr   date   month  day of week
+
+   min (0-59)
+   hr (0-23)
+   date (1-31)
+   month (1-12)
+   day (0-6) (0 or 7= sunday)
+
+   crontab -e     ------------- to schedule the cron jon
+    * * * * *  <path_of_command> <operatio_to_be_performed>
+
+    which <command> --------------- to find path of command
+    which touch
+
+   1. 15:59 
+      59 15 * * *  /bin/touch /crontab.txt  -----> create crontab.txt inside "/" at 15:59 
+   2. 10 sep 20:45
+      45 20 10 sep *
+   3. 7:00 am only on monday to friday
+      0 7 * * mon-fri
+   4. only on saturday at every minute
+      * * * * sat
+   5. evry 5 min
+      */5 * * * *
+   6. every 3 hr
+      0 */3 * * *
+   7. start from 06:08 and execute at every 5 min of interval
+      8/5 6 * * * 
+
+
+## Search and Filter utility in Linux :
+
+1) sort <file_name>  --------- sorts the lines alphabetically
+2) sort -r <file_name> -------sorts the lines alphabetically in reverse
+3) uniq <filename>  --------- removes dupicate lines
+4) wc <file_name> -------- shows numbers of lines, words, size of file
+   wc -l <file_name>
+   wc -w <file_name>
+5) locate <file_name> --------- find path of file from database
+   - apt update
+   - apt install plocate -y
+
+   - locate <file_name>
+     updatedb --------------- manually update database
+
+6) find   --------- find the file path with multiple options
+   - find /root -name <file_name>
+   - find / -perm 644
+   - find / -size +100M
+   - find / -user ubuntu
+
+7) grep --------used to search perticular informsation from file
+   - grep "Da" flower.txt
+
+task: 1) find -------- find out multiple options use with find command
+      2) egrep or grep -E
+      3) '|' ---- pipe command vs "&&" command
+
+
+## Process managemnt :
+  
+   Process : Running executable programs
+
+   1. Shell jobs
+   2. Daemon jobs ---- daemon process (system process)
+
+
+   1. shell jobs  ------ run by users
+
+      sleep 300 
+      ctrl+d  ------- save the job
+      ctrl+z  ------- stop the process
+      cltrl+c ------- cancel the process
+
+      sleep 700 & ----------- run the job in background
+
+      jobs   --------------- list all stopped or running jobs
+
+      bg %<job_ID> --------- run the job in background
+      fg %<job_ID> -------- run the job in foreground 
+
+   command :
+
+   1. ps -elf
+   2. ps -aux
+   3. ps -el
+
+
+      F       S     UID      PID     PPID      C   PRI  NI  ADDR SZ WCHAN  STIME TTY          TIME CMD
+     flag  state user ID  ProcessId Parent_processID  
+
+
+flag : 1 - running in memory, 4- running with supper user permission
+state of process : R - running process
+                   T - stopped process
+                   S - sleeping process (waiting for an event to complete). INTERRRUPTABLE_SLEEP
+                   D - process in sleep state that can not be stopped (UNINTERRUPTABLE_SLEEP)
+                   Z = ZOMBIE
+
+               D    uninterruptible sleep (usually IO)
+               I    Idle kernel thread
+               R    running or runnable (on run queue)
+               S    interruptible sleep (waiting for an event to complete)
+               T    stopped by job control signal
+               t    stopped by debugger during the tracing
+               W    paging (not valid since the 2.6.xx kernel)
+               X    dead (should never be seen)
+               Z    defunct ("zombie") process, terminated but not reaped by its parent
+
+PRI : priority value
+NI : NIce Value ------ range (-20 to 19)  lower the nice value get higher priority
+     command to change nice value:
+          renice -n <nice_nuber> -p <process_ID>
+          renice -n -10 -p 1222
+
+ADDR : memory address
+SZ : size 
+WCHAN : waiting chanel
+STIME : process start time
+TTY : terminal type
+
+command :
+ top 
+
+  load average: 0.79,       1.46,       0.73
+                (per min)  (per 5min)  (per 15 min)
+
+   increase stress of server/cpu
+   - apt update
+   - apt install stress
+   - stress -c 4
+
+    command to kill the process ;
+     1) kill <PID>
+     2) kill -9 
+     3) killall <command name>
+        killall sleep -------------- kill all running process name with sleep
+     4) pkill <command name>
+        pkill sleep 
+
+      kill the process in top 
+       - press "k" key
+       - provide the process id
+       - enter 
+
+
+
+Networking :
+
+OSI mode
+
+1> Application layer 
+ protocol - http, https,ftp,smtp, DNS, telnet
+
+
+ ip classes and its ranges
+
+
+ Tpes of ip :
+ IPv6 -- 128 bit
+
+ IPv4 -- 32 bit -- 4 octets
+
+ 1 octes = 8 bit
+ 
+ 11111111         11111111         11111111       11111111
+   255              255              255             255
+
+1      1       1        1       1      1       1    1
+2^7   2^6     2^5      2^4     2^3    2^2    2^1   2^0
+128    64     32        16      8       4      2    1    = 255
+
+
+0-255  0-255  0-255  0-255
+
+0.0.0.0 - 255.255.255.255
+
+
+Class A : 1.0.0.0   to  126.255.255.255
+Class B : 128.0.0.0 to  191.255.255.255
+Class C : 192.0.0.0 to  223.255.255.255
+Class D : 224.0.0.0 to  239.255.255.255
+Class E : 240.0.0.0 to  255.255.255.255
+
+Public IP and Private IP : 
+
+
+
+10.255.255.255 --- > 11.0.0.0
+                     11.0.0.1
+                     11.0.0.2
+                          |
+                     11.0.0.255
+                     11.0.1.0
+                     11.0.1.1
+                     11.0.1.2
+                         |
+                     11.0.1.255
+                     
