@@ -204,7 +204,7 @@ ex: mv /mnt/project /home/ -------- move project dir from mnt to home
 18.usr
 19.var
 
-## Eitior in Linux 
+## Editior in Linux :
 
 In windows :- note pad, m. world, vs code
 
@@ -449,7 +449,12 @@ r (read) ------- cat, more, less, head, tail, vim
 w (write) ------ edit(vim), rm, cp, mv, redirect
 x (execute) ---- commands, scripts 
 
-
+Practical : -Login with root user
+            -Create file with some data in /home directory (Owner and group Owner of file must be root user)
+            -Switch to loacal user (ex. ubuntu)
+            -As per permission check which actions he can performed
+            -Change permissio using sudo
+            
 chmod u-r <filename/directoryname> ------ remove read permission of user
 chmod u-rx <filename>  ----------------- remove read and execute permission from user
 chmod g+rwx <filename>   ----------------- add write permission for group
