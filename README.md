@@ -443,6 +443,8 @@ r (read)  ------- ls
 w (write) ------- touch, mkdir, rm, cp, mv
 x (execute) ----- cd
 
+Note: Even you have a permission of write(w) but if not have permisssion of execute, then you cant performed write operations in Directory 
+     Even if you have write (w) permission on a directory, you cannot perform write operations unless you also have execute (x) permission on that directory.
 
 for file :
 r (read) ------- cat, more, less, head, tail, vim 
