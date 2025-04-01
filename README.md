@@ -495,6 +495,10 @@ Task:
 bydefault permissions for root user  ----- for file and directory  file- 644   dir- 755
 bydefault permission for local user  ----- for file and directory  file- 664   dir- 775
 
+change owner of file/directory : chown <new_owner> <file/dir_name>
+chmnge group_owner of file/dir : chgrp <new_group> <file/dir_name>
+change owner and group_owner at once of file/directory : chown <new_owner>:<new_group> <file/dir_name>
+
 
 #There are two types of symblolic link
 1. Hard link
