@@ -687,6 +687,19 @@ Tools :
    - find / -perm 644
    - find / -size +100M
    - find / -user ubuntu
+  
+   -  170  find / -name cronfile.txt
+  171  find / -name cron
+  172  find / -name cron*
+  173  find / -size +200M
+  174  du -sh /proc/kcore
+  175  du -sh /proc/1631/fdinfo/5
+  176  find / -size +100M
+  177  du -sh /usr/lib/llvm-18/lib/libLLVM.so.1
+  180  find / -size +50M -size -150M   ------ set limit to find the files from 50M to 150M 
+  181  find / -size +50M -size -100M
+  182  du -sh /usr/lib/llvm-18/lib/libLLVM.so.1
+  183  du -sh /usr/lib/llvm-18/lib/libclang-cpp.so.18.1
 
 7) grep --------used to search perticular informsation from file
    - grep "Da" flower.txt
